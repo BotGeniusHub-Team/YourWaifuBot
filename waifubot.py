@@ -67,7 +67,7 @@ def listener(*messages):
 							tb.send_message(chatid, text=name + '\'s shipgirl is ' + waifu_text + ' (' + waifu_title + ')', reply_to_message_id=msgid)
 								
 tb = telebot.TeleBot(TOKEN)
-tb.get_update()  # cache exist message
+tb.get_updates()  # cache exist message
 tb.set_update_listener(listener) #register listener
 tb.polling()
 while True:
