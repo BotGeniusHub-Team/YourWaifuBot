@@ -12,7 +12,7 @@ from io import BytesIO
 from PIL import Image
 from booru import getImage
 
-TOKEN = ''
+TOKEN = '5992274138:AAEg5D9CLZh6StoCCJXyCmtPwJtPlX1k_mQ'
 
 def listener(*messages):
 	for m in messages:
