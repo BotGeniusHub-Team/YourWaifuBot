@@ -3,8 +3,6 @@
 from bs4 import BeautifulSoup
 import urllib.request
 
-soup = BeautifulSoup(response, features="lxml")
-
 class Booru:
 
     @staticmethod
@@ -14,7 +12,7 @@ class Booru:
         :return: JSON/XML raw data
         """
         response = urllib.request.urlopen(url)
-        soup = BeautifulSoup(response)
+        soup = BeautifulSoup(response, features="lxml")
         return soup
 
     def parse(self):
@@ -23,6 +21,8 @@ class Booru:
         :return: list of images URL.
         """
         raise NotImplementedError("parse() method not implemented.")
+
+# Rest of the code remains the same...
 
 
 class Safebooru(Booru):
