@@ -3,6 +3,8 @@
 from bs4 import BeautifulSoup
 import urllib.request
 
+soup = BeautifulSoup(response, features="lxml")
+
 class Booru:
 
     @staticmethod
